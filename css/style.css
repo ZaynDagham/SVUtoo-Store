@@ -10,7 +10,7 @@
     
 }
 body.fixed-header-padding {
-    padding-top: 70px; /* Adjust this value based on your header's height */
+    padding-top: 0px; /* Adjust this value based on your header's height */
 }
 .navbar{
     padding: 16px 0px 12px 0px;
@@ -27,6 +27,7 @@ body.fixed-header-padding {
 
 .body{
     background: #222222;
+    margin-top: 60px;
     padding: 60px;
     text-align: center;
     display: flex;
