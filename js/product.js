@@ -49,33 +49,6 @@ setMainImage = (imageIndex) => {
   thumbnails[imageIndex - 1].classList.add('active')
 }
 
-MainImageClick = () => {
-  if (window.innerWidth >= 1400) {
-    if (lightBoxOverlay.childElementCount == 1) {
-      const newLightbox = mainImagesContainer.cloneNode(true)
-      lightBoxOverlay.appendChild(newLightbox)
-
-      const overlayCloseBtn = document.querySelector('#overlayClose')
-      overlayCloseBtn.addEventListener('click', closeLightbox)
-
-      lightboxThumbnails = lightBoxOverlay.querySelectorAll('.thumbnail-image-container')
-      lightboxMainImage = lightBoxOverlay.querySelector('.product-image')
-
-      lightboxThumbnails.forEach(img => {
-        img.addEventListener('click', lightboxThumbnailClick)
-      })
-
-      const lightboxNextBtn = lightBoxOverlay.querySelector('.next')
-      const lightboxPreviousBtn = lightBoxOverlay.querySelector('.previous')
-
-      lightboxNextBtn.addEventListener('click', lightboxNextBtnClick)
-      lightboxPreviousBtn.addEventListener('click', lightboxPreviousBtnClick)
-    }
-
-    lightBoxOverlay.classList.remove('hidden')
-  }
-}
-
 closeLightbox = () => {
   lightBoxOverlay.classList.add('hidden')
 }
